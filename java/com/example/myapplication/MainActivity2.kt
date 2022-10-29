@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 
 class MainActivity2 : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -13,8 +14,9 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
 
-        val secondActButton = findViewById<Button>(R.id.bu2)
-        secondActButton.setOnClickListener {
+        val click=findViewById<Button>(R.id.bu2)
+        click.setOnClickListener {
+            Toast.makeText(this, "Going to prev page", Toast.LENGTH_SHORT).show()
             val i = Intent(this, MainActivity::class.java)
             startActivity(i)
         }
