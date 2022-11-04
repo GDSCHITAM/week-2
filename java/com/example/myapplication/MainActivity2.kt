@@ -26,5 +26,12 @@ class MainActivity2 : AppCompatActivity() {
         startActivity(Intent(Intent.ACTION_VIEW).apply{
             data = Uri.parse(url)
         })
+
+//        val showButton = findViewById<Button>(R.id.input)
+//        val editText = findViewById<Button>(R.id.editText)
+//        showButton.setOnClickListener{
+//            val text = editText.text
+//            Toast.makeText(this, text,Toast.LENGTH_SHORT).show()
+//        }
     }
 }
