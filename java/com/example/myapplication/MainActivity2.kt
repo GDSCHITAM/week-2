@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,5 +21,10 @@ class MainActivity2 : AppCompatActivity() {
             val i = Intent(this, MainActivity::class.java)
             startActivity(i)
         }
+
+        val url = "https:gdsc-hitam.github.io";
+        startActivity(Intent(Intent.ACTION_VIEW).apply{
+            data = Uri.parse(url)
+        })
     }
 }
